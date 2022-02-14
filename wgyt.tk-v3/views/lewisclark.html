@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('../includes/head.html', {title: `${data.data.title}`,description:`${data.data.description} - Blog`}); %>
+</head>
+
+<body>
+	<!-- NAVBAR -->
+	<nav style="background-color:rgb(229, 231, 235)" class="w-full z-10 top-0 overflow-x-auto p-4 grid grid-cols-9" id="top">
+		<div class="text-black font-bold col-span-8" style="justify-content: flex-start">
+			<a href="/lewisclark/home" class="text-black no-underline hover:text-black hover:no-underline font-bold nuxt-link-active"><span class="text-2xl"><img src="https://lh3.googleusercontent.com/fife/ABSRlIqky7pVkXKc2QLuXQQvdzUSk7NqNuOulrjqI70FvTR9SkLvsx2U2EHt8P8fQrO_ydhyp4o8Hm1mYbGXUY7Y6gqDlT-aHHBvyVTUx3VeQ1aCZRGTw2jKL6c9DPGtRuOOy9uPj734CxP0fXX8Aq1VW7219RbkYmu1YE84rpTIoIJGmwoqzPWBMSkpAhXrgbljOj54YypJU00PqywhONH3l2mQVY4mejWuhzYATxmTEDKdyiimRaWj_L9pU9voeGgn1UJJ66BDUiCgocb1OIF19_UhEkxVBm6wjuaYe-zDu9bEUsb8-5uGyi5LXjlHicMLayGrcRyCnu9a3JrNnMg0Y-cNCE8x6QfFGqMPtOneDtGmArHwHCmjyBBq4eHqoGChrfEXXNvs72FPNLCOjssJtQw6ejK_bZele-t__abz3tCB3eKrrA8jp1ce9oEtwKwMRUYhQKxSk2KPI8Aj1sGxTlc0CV8qT0gZ-dE6zgVB8opp1mzKZltsEXCZTY_N8enZ6xUwmIFOZ2Wu5lqTrcamZHFQ-H4gcYgYtEIlXxeJhCdhiEIPztMN8iG5zS9Ohe7IqOodRf5yzsob21cPzPlML4gcNtsyTkdZbQLckoZWXjcyawWuBsIShDv_DSoIwq1YXBHI1dIyPNa7-3_0cYQil7qQxLYt52pkyevVG99qysAnVMNpssKZdVJPyciY870q5VLVosKWl8KgEydeb6q14BdFXmxi6TKya0uGI1y3FcefKDM=s128-c" height="40" width="48" alt="Wgyt logo" class="h-10 pr-2 inline-block">William Horning - Corps Of Discovery Project</span></a>
+  </div>
+</nav>
+  <!-- ARTICLE -->
+  <div class="bg-gray-200">
+  <article class="prose mx-auto ">
+		<% if (data.data.image!='nope') { %>
+    <img src="<%- data.data.image %>">
+		<% } %>
+      <h1><%- data.data.title %>  </h1>
+      <p>By: <%- data.data.author %> </p>
+      <p>Published: <%- data.data.formattedDate %> </p>
+  <%- md %>  
+  </article>
+  </div>
+	<!-- FOOTER -->
+<footer style="background-color:rgb(229, 231, 235)" id="bottom">
+		<div class="flex pb-5 m-auto pt-5 text-black text-center text-sm flex-col md:flex-row max-w-6xl">
+			<div class="mt-2">© Copyright 2021 William Horning. All Rights Reserved.</div>
+		</div>
+</footer>
+<script src="/js/main.js">
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fece00312c024f979c888667fa0bb584"}'></script><!-- End Cloudflare Web Analytics --></body>
+
+</html>

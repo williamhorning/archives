@@ -1,0 +1,45 @@
+<footer class="bg-blue-900" id="bottom">
+		<div class="flex pb-5 m-auto pt-5 text-white text-center text-sm flex-col md:flex-row max-w-6xl">
+			<div class="mt-2">© Copyright 2021 William Horning. All Rights Reserved.</div>
+		</div>
+  <script>
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+  document.getElementById("light").style.display = "none";
+  document.getElementById("dark").style.display = "block";
+;
+
+} else {
+  document.documentElement.classList.remove('dark')
+    document.getElementById("light").style.display = "block";
+  document.getElementById("dark").style.display = "none";
+;
+
+}
+const toggle = () => {
+  if (localStorage.theme == 'dark') {
+// Whenever the user explicitly chooses light mode
+  localStorage.theme = 'light'
+  document.documentElement.classList.remove('dark')
+    document.getElementById("light").style.display = "block";
+  document.getElementById("dark").style.display = "none";
+
+
+} else {
+// Whenever the user explicitly chooses dark mode
+  localStorage.theme = 'dark'
+  document.documentElement.classList.add('dark')
+  document.getElementById("light").style.display = "none";
+  document.getElementById("dark").style.display = "block";
+
+
+}
+}
+
+document.getElementById("toggle").addEventListener("click", toggle);
+// Whenever the user explicitly chooses to respect the OS preference
+</script>
+</footer>
+<script src="/js/main.js">
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fece00312c024f979c888667fa0bb584"}'></script><!-- End Cloudflare Web Analytics -->
