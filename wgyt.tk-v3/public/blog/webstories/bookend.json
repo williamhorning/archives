@@ -1,0 +1,27 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": [
+    "email",
+    "tumblr",
+    {
+      "provider": "twitter",
+      "text": "Check out this awesome blog post!"
+		},
+    {
+      "provider": "facebook",
+      "app_id": "MY_FACEBOOK_APP_ID"
+    }
+  ],
+  "components": [
+    {
+      "type": "heading",
+      "text": "More stuff"
+    },
+    {
+      "type": "small",
+      "title": "Comment on this article",
+      "url": "https://social.wgyt.tk/comments/embed/webstories",
+      "image": "https://www.wgyt.tk/images/logo.webp"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white dark:bg-black">
+  <head>
+<%- include('../includes/head.html', {title: `${data.data.title}`,description:`${data.data.description} - Blog`}); %>
+</head>
+
+<body>
+  <!-- HEADER -->
+	<%- header %>
+  <!-- ARTICLE -->
+  <div class="bg-gray-200">
+  <article class="prose mx-auto ">
+    <img src="<%- data.data.image %>">
+      <h1><%- data.data.title %>  </h1>
+      <p>By: <%- data.data.author %> </p>
+      <p>Published: <%- data.data.formattedDate %> </p>
+    <br>
+  <%- md %>  
+    <br>
+  </article>
+    <iframe class="w-full h-60" src="https://social.wgyt.tk/comments/embed/<%- data.data.url %>"></iframe>
+  </div>
+	<!-- BLOG -->
+<%- include('../includes/blogpostlist.html'); %>
+	<!-- FOOTER -->
+<%- include('../includes/footer.html'); %>
+</body>
+
+</html>

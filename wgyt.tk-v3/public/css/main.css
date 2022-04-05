@@ -1,0 +1,26 @@
+/*! my css */
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb{
+  width: 0px;
+}
+* {
+	scroll-behavior: smooth;
+}
+#top {
+	z-index: 100000
+}
+.typedjs {
+  display: inline;
+}
+span.typed-cursor {
+    font-size: 24px;
+}
+* {
+  transition: 0.1s;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

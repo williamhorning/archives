@@ -1,0 +1,1 @@
+curl https://uuid.rocks/plain/bulk\?count=20000\&benicetoceru >> e
